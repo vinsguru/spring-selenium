@@ -18,6 +18,7 @@ public class SearchComponent extends Base {
 
     public void search(final String keyword){
         this.searchBox.sendKeys(keyword);
+        this.searchBox.click();
         this.searchBtns
                 .stream()
                 .filter(e -> e.isDisplayed() && e.isEnabled())
