@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="spring-boot" parallel="tests">
+    <test name="test-1">
+        <classes>
+            <class name="com.udemy.spring.springselenium.googletest.Google1Test" />
+        </classes>
+    </test>
+    <test name="test-2">
+        <classes>
+            <class name="com.udemy.spring.springselenium.googletest.Google2Test" />
+        </classes>
+    </test>
+</suite>
