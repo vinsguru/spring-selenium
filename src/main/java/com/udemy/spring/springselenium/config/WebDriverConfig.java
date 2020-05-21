@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Scope;
 
 @Profile("!remote")
 @LazyConfiguration
@@ -22,6 +23,7 @@ public class WebDriverConfig {
     }
 
     @Bean
+    @Scope("browserscope")
     @ConditionalOnMissingBean
     public WebDriver chromeDriver(){
         WebDriverManager.chromedriver().version("77.0.3865.40").setup();
