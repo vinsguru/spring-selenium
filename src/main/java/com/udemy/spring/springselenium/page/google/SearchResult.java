@@ -1,6 +1,6 @@
 package com.udemy.spring.springselenium.page.google;
 
-import com.udemy.spring.springselenium.annotation.PageFragment;
+import com.udemy.spring.springselenium.kelvin.annotation.PageFragment;
 import com.udemy.spring.springselenium.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
