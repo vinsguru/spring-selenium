@@ -2,6 +2,7 @@ package com.udemy.spring.springselenium.page.google;
 
 import com.udemy.spring.springselenium.kelvin.annotation.PageFragment;
 import com.udemy.spring.springselenium.page.Base;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -18,7 +19,7 @@ public class SearchComponent extends Base {
 
     public void search(final String keyword){
         this.searchBox.sendKeys(keyword);
-        this.searchBox.click();
+        this.searchBox.sendKeys(Keys.TAB);
         this.searchBtns
                 .stream()
                 .filter(e -> e.isDisplayed() && e.isEnabled())
