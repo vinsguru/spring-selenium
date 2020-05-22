@@ -3,7 +3,6 @@ package com.udemy.spring.springselenium.resource;
 import com.udemy.spring.springselenium.SpringBaseTestNGTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.FileCopyUtils;
@@ -24,9 +23,6 @@ public class ResourceTest extends SpringBaseTestNGTest {
 
     @Autowired
     private ResourceLoader resourceLoader;
-
-    @Autowired
-    private ApplicationContext applicationContext;
 
     @Test(dataProvider = "getData")
     public void resourceTest(String url, String saveAs) throws IOException {
