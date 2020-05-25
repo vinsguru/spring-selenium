@@ -1,5 +1,6 @@
 Feature: User visa registration feature
 
+  @visa
   Scenario Outline: I should be able to submit visa form
     Given I am on VISA registration form
     When I select my from country "<fromCountry>" and to country "<toCountry>"

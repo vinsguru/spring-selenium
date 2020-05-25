@@ -1,7 +1,6 @@
 package com.udemy.spring.springselenium.kelvin.service;
 
 import com.github.javafaker.Faker;
-import com.udemy.spring.springselenium.kelvin.annotation.TakeScreenshot;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.beans.factory.annotation.Autowired;
