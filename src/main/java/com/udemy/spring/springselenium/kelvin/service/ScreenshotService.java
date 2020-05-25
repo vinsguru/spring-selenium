@@ -1,6 +1,7 @@
 package com.udemy.spring.springselenium.kelvin.service;
 
 import com.github.javafaker.Faker;
+import com.udemy.spring.springselenium.kelvin.annotation.TakeScreenshot;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,10 @@ public class ScreenshotService {
     public void takeScreenShot() throws IOException {
         File sourceFile = this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.FILE);
         FileCopyUtils.copy(sourceFile, this.path.resolve(faker.name().firstName() + ".png").toFile());
+    }
+
+    public byte[] getScreenshot(){
+        return this.ctx.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.BYTES);
     }
 
 }
