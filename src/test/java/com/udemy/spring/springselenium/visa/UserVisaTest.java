@@ -45,7 +45,7 @@ public class UserVisaTest extends SpringBaseTestNGTest {
                 Date.valueOf(context.getCurrentXmlTest().getParameter("dobTo"))
         )
                 .stream()
-                .limit(1)
+                .limit(3)
                 .toArray();
     }
 
