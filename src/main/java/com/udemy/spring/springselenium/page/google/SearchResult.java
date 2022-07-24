@@ -10,7 +10,7 @@ import java.util.List;
 @PageFragment
 public class SearchResult extends Base {
 
-    @FindBy(css = "div.rc")
+    @FindBy(css = "div.g")
     private List<WebElement> results;
 
     public int getCount(){

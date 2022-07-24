@@ -3,6 +3,9 @@ package com.udemy.spring.springselenium.kelvin.config;
 import com.udemy.spring.springselenium.kelvin.annotation.LazyConfiguration;
 import com.udemy.spring.springselenium.kelvin.annotation.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,13 +25,13 @@ public class RemoteWebDriverConfig {
     @ThreadScopeBean
     @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver remoteFirefoxDriver(){
-        return new RemoteWebDriver(this.url, DesiredCapabilities.firefox());
+        return new RemoteWebDriver(this.url, new ChromeOptions());
     }
 
     @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver remoteChromeDriver(){
-        return new RemoteWebDriver(this.url, DesiredCapabilities.chrome());
+        return new RemoteWebDriver(this.url, new FirefoxOptions());
     }
 
 }

@@ -5,9 +5,12 @@ import com.udemy.spring.springselenium.page.google.GooglePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.testng.Assert;
 
+@CucumberContextConfiguration
 @SpringBootTest
 public class GoogleSteps {
 

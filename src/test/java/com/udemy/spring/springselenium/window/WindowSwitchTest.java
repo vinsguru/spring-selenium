@@ -41,14 +41,14 @@ public class WindowSwitchTest extends SpringBaseTestNGTest {
     }
 
     @DataProvider
-    public Object[] getData(){
-        return new Object[] {
-                3,
-                4,
-                1,
-                5,
-                6,
-                2
+    public Object[][] getData(){
+        return new Object[][] {
+                {3},
+                {4},
+                {1},
+                {5},
+                {6},
+                {2}
         };
     }
 

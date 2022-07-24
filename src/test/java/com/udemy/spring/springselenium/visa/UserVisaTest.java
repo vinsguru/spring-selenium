@@ -1,7 +1,7 @@
 package com.udemy.spring.springselenium.visa;
 
 import com.udemy.spring.springselenium.SpringBaseTestNGTest;
-import com.udemy.spring.springselenium.entity.User;
+import com.udemy.spring.springselenium.entity.Customer;
 import com.udemy.spring.springselenium.page.visa.VisaRegistrationPage;
 import com.udemy.spring.springselenium.repository.UserRepository;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ public class UserVisaTest extends SpringBaseTestNGTest {
     private UserRepository repository;
 
     @Test(dataProvider = "getData")
-    public void visaTest(User u){
+    public void visaTest(Customer u){
         this.registrationPage.goTo();
         this.registrationPage.setNames(u.getFirstName(), u.getLastName());
         this.registrationPage.setCountryFromAndTo(u.getFromCountry(), u.getToCountry());
@@ -39,14 +39,15 @@ public class UserVisaTest extends SpringBaseTestNGTest {
     }
 
     @DataProvider
-    public Object[] getData(ITestContext context){
+    public Object[][] getData(ITestContext context){
         return this.repository.findByDobBetween(
-                Date.valueOf(context.getCurrentXmlTest().getParameter("dobFrom")),
-                Date.valueOf(context.getCurrentXmlTest().getParameter("dobTo"))
+                Date.valueOf("2000-01-01"),
+                Date.valueOf("2010-01-01")
         )
                 .stream()
                 .limit(3)
-                .toArray();
+                .map(o -> new Customer[]{o})
+                .toArray(Object[][]::new);
     }
 
 

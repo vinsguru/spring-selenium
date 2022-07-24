@@ -9,6 +9,8 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
+import java.time.Duration;
+
 @LazyConfiguration
 public class WebDriverWaitConfig {
 
@@ -18,7 +20,8 @@ public class WebDriverWaitConfig {
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
     public WebDriverWait webdriverWait(WebDriver driver){
-        return new WebDriverWait(driver, this.timeout);
+        return new WebDriverWait(driver, Duration.ofSeconds(this.timeout));
+        // return new WebDriverWait(driver, this.timeout);
     }
 
 }

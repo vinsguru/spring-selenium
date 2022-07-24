@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Profile;
 
-@Profile("!remote")
+//@Profile("!remote")
 @LazyConfiguration
 public class WebDriverConfig {
 
@@ -24,7 +24,8 @@ public class WebDriverConfig {
     @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver chromeDriver(){
-        WebDriverManager.chromedriver().version("77.0.3865.40").setup();
+        WebDriverManager.chromedriver()
+                .setup();
         return new ChromeDriver();
     }
 

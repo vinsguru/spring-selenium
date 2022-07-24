@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.sql.Date;
 
 @Entity
-public class User {
+public class Customer {
 
     @Id
     private Integer id;

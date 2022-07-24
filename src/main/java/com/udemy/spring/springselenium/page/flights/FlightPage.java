@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Page
 public class FlightPage extends Base {
 
-    @FindBy(css = "a.gws-travel-header__nav-item span.gws-travel-header__nav-label")
+    @FindBy(css = "nav.rlGvde a")
     private List<WebElement> elements;
 
     public void goTo(final String url){

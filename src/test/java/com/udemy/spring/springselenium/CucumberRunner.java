@@ -5,13 +5,12 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
-        strict = true,
         features = "classpath:features",
         glue = "com.udemy.spring.springselenium.bdd",
-        tags = { "@visa" },
+        tags =  "@visa",
         plugin = {
                 "pretty",
-                "html:/home/vins/Documents/udemy/temp/"
+                "html:/some-path/"
         }
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
