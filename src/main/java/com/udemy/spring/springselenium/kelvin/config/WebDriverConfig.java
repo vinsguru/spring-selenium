@@ -24,8 +24,7 @@ public class WebDriverConfig {
     @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver chromeDriver(){
-        WebDriverManager.chromedriver()
-                .setup();
+        WebDriverManager.chromedriver().setup();
         return new ChromeDriver();
     }
 

@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.1</version>
+		<version>3.1.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.udemy.spring</groupId>
@@ -15,10 +15,12 @@
 	<description>spring selenium framework</description>
 
 	<properties>
-		<java.version>11</java.version>
-		<selenium.version>4.2.1</selenium.version>
-		<webdrivermanager.version>5.2.0</webdrivermanager.version>
-		<testng.version>7.6.0</testng.version>
+		<java.version>17</java.version>
+		<selenium.version>4.11.0</selenium.version>
+		<webdrivermanager.version>5.4.0</webdrivermanager.version>
+		<testng.version>7.8.0</testng.version>
+		<cucumber.version>7.14.0</cucumber.version>
+		<maven.surefire.plugin>3.1.0</maven.surefire.plugin>
 	</properties>
 
 	<dependencies>
@@ -39,7 +41,6 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -54,19 +55,19 @@
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>7.3.3</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-spring</artifactId>
-			<version>7.3.3</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
-			<version>7.3.3</version>
+			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -105,7 +106,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.2</version>
+				<version>${maven.surefire.plugin}</version>
 				<configuration>
 					<properties>
 						<property>
