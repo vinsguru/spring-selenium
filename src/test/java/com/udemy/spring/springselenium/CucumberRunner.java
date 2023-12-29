@@ -10,7 +10,7 @@ import org.testng.annotations.DataProvider;
         tags =  "@visa",
         plugin = {
                 "pretty",
-                "html:/some-path/"
+                "html:target/index.html"
         }
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {

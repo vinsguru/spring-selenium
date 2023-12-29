@@ -20,7 +20,7 @@
 		<webdrivermanager.version>5.4.0</webdrivermanager.version>
 		<testng.version>7.8.0</testng.version>
 		<cucumber.version>7.14.0</cucumber.version>
-		<maven.surefire.plugin>3.1.0</maven.surefire.plugin>
+		<maven.surefire.plugin>3.0.0-M1</maven.surefire.plugin>
 	</properties>
 
 	<dependencies>
