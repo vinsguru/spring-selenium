@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.0</version>
+		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.udemy.spring</groupId>
@@ -16,10 +16,10 @@
 
 	<properties>
 		<java.version>21</java.version>
-		<selenium.version>4.27.0</selenium.version>
-		<webdrivermanager.version>5.9.2</webdrivermanager.version>
-		<testng.version>7.10.2</testng.version>
-		<cucumber.version>7.20.1</cucumber.version>
+		<selenium.version>4.33.0</selenium.version>
+		<webdrivermanager.version>6.1.0</webdrivermanager.version>
+		<testng.version>7.11.0</testng.version>
+		<cucumber.version>7.22.2</cucumber.version>
 		<faker.verison>1.0.2</faker.verison>
 		<maven.surefire.plugin>3.0.0-M1</maven.surefire.plugin>
 	</properties>
@@ -52,7 +52,6 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>${webdrivermanager.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
